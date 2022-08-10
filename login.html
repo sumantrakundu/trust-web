@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to trUSt</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+	<meta name="robots" content="index, follow" />
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <!-- SEO Start-->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <!-- SEO End-->
+	<meta name="theme-color" content="#FF6600" />
+    <meta name="msapplication-navbutton-color" content="#FF6600" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#FF6600" />
+
+    <!-- CSS Start -->
+    <link href="css/main.min.css" rel="stylesheet" type="text/css" />
+	<link href="css/fontawesome.css" rel="stylesheet"  />
+    <link href="css/screen.css" rel="stylesheet"  />
+	<link href="css/developer.css" rel="stylesheet"  />
+	
+</head>
+<body class="">
+
+    <!-- HTML Start -->
+	<div class="login wizard d-flex flex-column flex-lg-row flex-column-fluid">
+		<div class="col-lg-6 login-bg d-flex justify-content-center align-items-center flex-column px-0 pt-lg-0 pb-lg-0 pt-4 pb-6">
+			<p class="login-title">Welcome to</p>
+			<img src="images/trust-logo.png" class="login-logo" alt="trUSt" />
+		</div>
+		<div class="col-lg-6 login-aside px-lg-5 px-4 d-flex justify-content-center align-items-center">
+			<section class="login-text">
+				<h2 class="login-heading">Let’s Get Started!</h2>
+				<form class="needs-validation" novalidate onsubmit="return buttonPress();">
+					<div class="form-group">
+						<label class="mb-1">Staff ID</label>
+						<input class="form-control px-3" type="text" placeholder="E.g TM12345" id="staffID" required name="staffID" autofocus>
+						<div class="invalid-feedback">Please provide Staff ID.</div>
+					</div>
+					<div class="form-group position-relative">
+						<label class="mb-1">Password</label>
+						<i class="fas fa-eye-slash show-password" onclick="showPasword()"></i>
+						<input class="form-control px-3" placeholder="E.g XrFeDwT%62!" type="password" id="password" name="password" required>
+						<div class="invalid-feedback">
+							Must be 8-20 characters long.
+						</div>
+					</div>
+					<div class="row mb-5">
+						<div class="col-lg-6 d-flex align-items-center">
+							<div class="form-group form-check mb-lg-0">
+								<input type="checkbox" class="form-check-input" id="rememberme">
+								<label class="form-check-label" for="rememberme">Remember me</label>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="form-group mb-0">
+								<button type="submit" class="btn btn-primary btn-blue w-100" id="login-btn">Login</button>
+							</div>
+						</div>
+					</div>
+					<p>Dear Users,<br> If you have any queries, problems or have not received any ID and password, please log into <a href="#">TM ID Self Service System.</a></p>
+					<p class="text-right powered-by">powered by  <img src="images/tm-logo.png" alt="TM Logo" /></p>
+				</form>
+				<ul class="app-btn-list">
+					<li>
+						<a href="#" target="_blank" class="app-btn">
+							<i class="fab fa-apple app-icon"></i>
+							<p>Download for
+							<span>Appstore</span>
+							</p>
+						</a>
+					</li>
+					<li>
+						<a href="#" target="_blank" class="app-btn">
+							<i class="fab fa-android app-icon"></i>
+							<p>Download for
+							<span>Android</span>
+							</p>
+						</a>
+					</li>
+				</ul>
+			</section>
+		</div>
+	</div>
+	
+	<footer class="footer mt-lg-0 mt-3">
+		<p class="mb-0">Copyright <script>document.write(new Date().getFullYear())</script> Telekom Malaysia Berhad. All rights reserved.</p>
+	</footer>
+	
+    <!-- JS Start -->
+    <script src="js/main.min.js"></script>
+	<script>
+	<!-- Password Hide Show-->
+	function showPasword() {
+		  var x = document.getElementById("password");
+		  if (x.type === "password") {
+			x.type = "text";
+			$(".show-password").removeClass( "fa-eye-slash" );
+			$(".show-password").addClass( "fa-eye" );
+		  } else {
+			x.type = "password";
+			$(".show-password").addClass( "fa-eye-slash" );
+			$(".show-password").removeClass( "fa-eye" );
+		  }
+		}
+	
+	<!-- Login Button Click-->
+	/*$('#login-btn').click(function() {
+		window.location.href = 'continue-to-login.html';
+		return false;
+	});*/
+	
+	
+	</script>
+	
+	<script>
+	// Example starter JavaScript for disabling form submissions if there are invalid fields
+	(function() {
+	  'use strict';
+	  window.addEventListener('load', function() {
+		// Fetch all the forms we want to apply custom Bootstrap validation styles to
+		var forms = document.getElementsByClassName('needs-validation');
+		// Loop over them and prevent submission
+		var validation = Array.prototype.filter.call(forms, function(form) {
+		  form.addEventListener('submit', function(event) {
+			if (form.checkValidity() === false) {
+			  event.preventDefault();
+			  event.stopPropagation();
+			}
+			form.classList.add('was-validated');
+		  }, false);
+		});
+	  }, false);
+	})();
+	</script>
+	
+    <!-- JS End -->
+</body>
+</html>
+
