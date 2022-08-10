@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to trUSt</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+	<meta name="robots" content="index, follow" />
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <!-- SEO Start-->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <!-- SEO End-->
+	<meta name="theme-color" content="#FF6600" />
+    <meta name="msapplication-navbutton-color" content="#FF6600" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#FF6600" />
+
+    <!-- CSS Start -->
+    <link href="css/main.min.css" rel="stylesheet" type="text/css" />
+	<link href="css/fontawesome.css" rel="stylesheet"  />
+    <link href="css/screen.css" rel="stylesheet"  />
+	<link href="css/developer.css" rel="stylesheet"  />
+	
+</head>
+<body class="">
+
+    <!-- HTML Start -->
+	<div class="login wizard d-flex flex-column flex-lg-row flex-column-fluid">
+		<div class="col-lg-6 login-bg d-flex justify-content-center align-items-center flex-column px-0 pt-lg-0 pb-lg-0 pt-2 pb-6">
+			<p class="login-title mb-2 mb-lg-4">Continue to in <span class="countdown">10 seconds...</span></p>
+			<img src="images/trust-logo.png" class="login-logo" alt="trUSt" />
+			<button type="button" class="btn btn-primary btn-blue mt-2 mt-lg-4" id="proceed-btn">Proceed</button>
+		</div>
+		<div class="col-lg-6 login-aside px-lg-5 px-4 d-flex justify-content-center align-items-center">
+			<section class="login-text">
+				<h2 class="continue-login-heading">Or you can choose to go to…</h2>
+				<ul class="login-widget">
+					<li>
+						<a href="#">
+							TRIBE
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/logo-deteet.png" alt="Logo" />
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							TRUE
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							TROOP
+						</a>
+					</li>
+				</ul>
+			</section>
+		</div>
+	</div>
+	
+	<footer class="footer mt-lg-0 mt-3">
+		<p class="mb-0">Copyright <script>document.write(new Date().getFullYear())</script> Telekom Malaysia Berhad. All rights reserved.</p>
+	</footer>
+	
+    <!-- JS Start -->
+    <script src="js/main.min.js"></script>
+    <script src="js/common.ui.js"></script>
+	<script>
+	<!-- Countdown -->
+	var count = 9;
+	  var countdown = setInterval(function(){
+		$(".countdown").html(count + " seconds...");
+		if (count == 0) {
+		  clearInterval(countdown);
+		  window.open('dashboard.html', "_self");
+		}
+		count--;
+	  }, 1000);
+	  
+	<!-- Proceed Button Click-->
+	$('#proceed-btn').click(function() {
+		window.location.href = 'dashboard.html';
+		return false;
+	});
+	</script>
+	
+    <!-- JS End -->
+</body>
+</html>
+
